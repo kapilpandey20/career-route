@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Choose Career - Career Route</title>
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <style>
+
+        body {
+            background: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
+
+        .career-container {
+            max-width: 1000px;
+            margin: 50px auto;
+        }
+
+        .career-card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+
+        .career-card h3 {
+            color: #0d6efd;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<nav class="navbar navbar-dark bg-dark">
+
+    <div class="container">
+
+        <span class="navbar-brand fw-bold">
+            Career Route 🚀
+        </span>
+
+        <a href="{% url 'dashboard' %}" class="btn btn-outline-light">
+            Dashboard
+        </a>
+
+    </div>
+
+</nav>
+
+
+<div class="container career-container">
+
+    <div class="text-center mb-5">
+
+        <h1>🚀 Choose Your Career</h1>
+
+        <p class="text-muted">
+            Select a career path to analyze your skills and identify missing skills.
+        </p>
+
+    </div>
+
+
+    {% if careers %}
+
+        {% for career in careers %}
+
+            <div class="career-card">
+
+                <h3>
+                    {{ career.name }}
+                </h3>
+
+                {% if career.description %}
+
+                    <p class="text-muted">
+                        {{ career.description }}
+                    </p>
+
+                {% endif %}
+
+
+                <div class="mb-3">
+
+                    <strong>
+                        Required Skills:
+                    </strong>
+
+                    <p>
+                        {{ career.required_skills }}
+                    </p>
+
+                </div>
+
+
+                <a
+                    href="{% url 'skill_gap' career.id %}"
+                    class="btn btn-primary"
+                >
+                    Analyze Skill Gap →
+                </a>
+
+            </div>
+
+        {% endfor %}
+
+    {% else %}
+
+        <div class="alert alert-warning text-center">
+
+            No career paths are available yet.
+
+        </div>
+
+    {% endif %}
+
+
+</div>
+
+
+</body>
+</html>

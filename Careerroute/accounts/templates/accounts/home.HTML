@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Career Route | AI Career Planner</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .hero {
+            min-height: 75vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, #f8f9fa, #e9f2ff);
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+        }
+
+        .feature-card {
+            border: none;
+            transition: 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .step-number {
+            font-size: 40px;
+        }
+
+        .navbar-brand {
+            font-size: 24px;
+        }
+
+        footer {
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+    <div class="container">
+
+        <a class="navbar-brand fw-bold" href="/">
+            🚀 Career Route
+        </a>
+
+        <div class="d-flex gap-2">
+
+            <a href="{% url 'login' %}"
+               class="btn btn-outline-light">
+                Login
+            </a>
+
+            <a href="{% url 'register' %}"
+               class="btn btn-primary">
+                Register
+            </a>
+
+        </div>
+
+    </div>
+</nav>
+
+
+<!-- ================= HERO SECTION ================= -->
+
+<section class="hero">
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <!-- LEFT -->
+            <div class="col-lg-7">
+
+                <span class="badge bg-primary mb-3">
+                    AI-Powered Career Planning
+                </span>
+
+                <h1 class="hero-title">
+                    Build Your
+                    <span class="text-primary">
+                        Career Route 🚀
+                    </span>
+                </h1>
+
+                <p class="lead mt-4">
+                    Discover your skills, identify skill gaps,
+                    and get a personalized learning roadmap
+                    for your dream career.
+                </p>
+
+                <div class="mt-4">
+
+                    <a href="{% url 'register' %}"
+                       class="btn btn-primary btn-lg me-2">
+                        Get Started →
+                    </a>
+
+                    <a href="#how-it-works"
+                       class="btn btn-outline-dark btn-lg">
+                        How It Works
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT -->
+            <div class="col-lg-5 text-center mt-5 mt-lg-0">
+
+                <div class="card shadow-lg border-0 p-4">
+
+                    <h2>🎯 Career Route</h2>
+
+                    <hr>
+
+                    <div class="text-start">
+
+                        <p>📄 Resume Analysis</p>
+
+                        <p>🛠️ Skill Detection</p>
+
+                        <p>📊 Skill Gap Analysis</p>
+
+                        <p>📚 Learning Roadmap</p>
+
+                        <p>💼 Career Recommendations</p>
+
+                    </div>
+
+                    <div class="alert alert-primary mb-0">
+                        Your Career. Your Route. Your Future.
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= HOW IT WORKS ================= -->
+
+<section id="how-it-works" class="py-5">
+
+    <div class="container">
+
+        <h2 class="text-center fw-bold">
+            How Career Route Works?
+        </h2>
+
+        <p class="text-center text-muted mb-5">
+            Follow these simple steps to plan your career.
+        </p>
+
+
+        <div class="row g-4">
+
+
+            <!-- STEP 1 -->
+
+            <div class="col-md-3">
+
+                <div class="card feature-card shadow-sm h-100 text-center">
+
+                    <div class="card-body">
+
+                        <div class="step-number">
+                            📄
+                        </div>
+
+                        <h4 class="mt-3">
+                            Upload Resume
+                        </h4>
+
+                        <p class="text-muted">
+                            Upload your resume and let Career Route
+                            analyze your profile automatically.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- STEP 2 -->
+
+            <div class="col-md-3">
+
+                <div class="card feature-card shadow-sm h-100 text-center">
+
+                    <div class="card-body">
+
+                        <div class="step-number">
+                            🎯
+                        </div>
+
+                        <h4 class="mt-3">
+                            Choose Career
+                        </h4>
+
+                        <p class="text-muted">
+                            Select the job role you want to
+                            prepare for.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- STEP 3 -->
+
+            <div class="col-md-3">
+
+                <div class="card feature-card shadow-sm h-100 text-center">
+
+                    <div class="card-body">
+
+                        <div class="step-number">
+                            📊
+                        </div>
+
+                        <h4 class="mt-3">
+                            Analyze Skill Gap
+                        </h4>
+
+                        <p class="text-muted">
+                            Compare your current skills with
+                            the required job skills.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- STEP 4 -->
+
+            <div class="col-md-3">
+
+                <div class="card feature-card shadow-sm h-100 text-center">
+
+                    <div class="card-body">
+
+                        <div class="step-number">
+                            📚
+                        </div>
+
+                        <h4 class="mt-3">
+                            Get Roadmap
+                        </h4>
+
+                        <p class="text-muted">
+                            Get a personalized learning roadmap
+                            to reach your career goal.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FEATURES ================= -->
+
+<section class="py-5 bg-light">
+
+    <div class="container">
+
+        <h2 class="text-center fw-bold mb-5">
+            Why Choose Career Route?
+        </h2>
+
+
+        <div class="row g-4">
+
+
+            <div class="col-md-4">
+
+                <div class="card feature-card shadow-sm h-100">
+
+                    <div class="card-body text-center">
+
+                        <h1>🤖</h1>
+
+                        <h4>
+                            AI Resume Analysis
+                        </h4>
+
+                        <p class="text-muted">
+                            Automatically identify skills and
+                            information from your resume.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="card feature-card shadow-sm h-100">
+
+                    <div class="card-body text-center">
+
+                        <h1>📈</h1>
+
+                        <h4>
+                            Skill Gap Detection
+                        </h4>
+
+                        <p class="text-muted">
+                            Find out which skills you already have
+                            and which skills you need.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="card feature-card shadow-sm h-100">
+
+                    <div class="card-body text-center">
+
+                        <h1>💼</h1>
+
+                        <h4>
+                            Career Guidance
+                        </h4>
+
+                        <p class="text-muted">
+                            Get career recommendations based on
+                            your skills and target job role.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CTA ================= -->
+
+<section class="py-5">
+
+    <div class="container text-center">
+
+        <h2 class="fw-bold">
+            Ready to Build Your Career Route?
+        </h2>
+
+        <p class="text-muted">
+            Upload your resume and start your personalized
+            career journey.
+        </p>
+
+        <a href="{% url 'register' %}"
+           class="btn btn-primary btn-lg">
+            Start Your Journey 🚀
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="bg-dark text-white text-center py-4">
+
+    <div class="container">
+
+        <h5>
+            🚀 Career Route
+        </h5>
+
+        <p class="mb-1">
+            AI-Powered Skill Gap & Career Planner
+        </p>
+
+        <small class="text-secondary">
+            © 2026 Career Route. All Rights Reserved.
+        </small>
+
+    </div>
+
+</footer>
+
+
+</body>
+</html>
